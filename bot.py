@@ -7,9 +7,9 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup, ReplyKeyb
 
 app = Client(
     "Jones",
-    api_id="26009823",
-    api_hash="e545fc56028ee9404ef5b5bec64503ca",
-    bot_token="7492489094:AAGCOLzrN8T6a67jDdeOpBExnAmtwOfMDY4"
+    api_id=apiid,
+    api_hash="apihash",
+    bot_token="Bot Token"
 )
 
 
