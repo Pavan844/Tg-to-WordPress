@@ -17,7 +17,7 @@ WELCOME_PHOTO = "welcome.jpeg"
 
 key = InlineKeyboardMarkup(
     [
-        [InlineKeyboardButton("🌐 Website", url="https://yoururl.com")]
+        [InlineKeyboardButton("🌐 Website", url="https://kannadamovies.42web.io")]
     ]
 )
 
@@ -53,7 +53,7 @@ def start(bot, message):
     webmessage = (
         f"Hey {message.from_user.first_name}!,\n"
         "We have created this bot so that you can share your files easily. If you want to see which files people are sharing and you want to get some ideas from them or you want to see them then you can see the sharing website.\n"
-        "Sharing Website: https://yoururl.com .\n\n"
+        "Sharing Website: https://kannadamovies.42web.io .\n\n"
         "You can open it directly by clicking on the button below."
     )
     bot.send_photo(
@@ -119,15 +119,15 @@ def download_and_create(client, message):
            'status': 'publish'
        }
 
-          api_url = 'https://yoururl.com/wp-json/wp/v2/posts'
+          api_url = 'https://kannadamovies.42web.io/wp-json/wp/v2/posts'
           response = requests.post(api_url, data=post_data, auth=(auth_username, auth_password))
 
           post_url = response.json().get('link')
           print(f'Post URL: {post_url}')
           return post_url
 
-       auth_username = 'username'
-       auth_password = 'password'
+       auth_username = 'pavan'
+       auth_password = 'kW5jnYK3^3w%VIZJykKIbr53'
        post_url = createPost(auth_username, auth_password, text, title)
        reply = (
           "𝗬𝗼𝘂𝗿 𝗟𝗶𝗻𝗸 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗲𝗱 !\n\n"
@@ -141,7 +141,7 @@ def download_and_create(client, message):
            [
                [
                    InlineKeyboardButton("📦 Post Link", url=f"{post_url}"),
-                   InlineKeyboardButton("🌐 Website Link", url="https://yoururl.com")
+                   InlineKeyboardButton("🌐 Website Link", url="https://kannadamovies.42web.io")
                ]
            ]
        )
@@ -161,7 +161,7 @@ def download_and_create(client, message):
           lines = text.split('\n')
           title = lines[0]
           def restMediaUL(filePath, auth_username, auth_password):
-              url = 'https://yoururl.com/wp-json/wp/v2/media'
+              url = 'https://kannadamovies.42web.io/wp-json/wp/v2/media'
               data = open(filePath, 'rb').read()
               fileName = os.path.basename(filePath)
               file_extension = os.path.splitext(filePath)[1]
@@ -190,14 +190,14 @@ def download_and_create(client, message):
 
               post_data['content'] = f'<video width="640" height="360" controls><source src="{file_link}" type="video/{file_extension[1:]}"></video>' + post_data['content']
 
-              api_url = 'https://yoururl.com/wp-json/wp/v2/posts'
+              api_url = 'https://kannadamovies.42web.io/wp-json/wp/v2/posts'
               response = requests.post(api_url, data=post_data, auth=(auth_username, auth_password))
 
               post_url = response.json().get('link')
               print(f'Post URL: {post_url}')
               return post_url, file_link  # Returning both post_url and file_link
-          auth_username = 'username'
-          auth_password = 'password'
+          auth_username = 'pavan'
+          auth_password = 'kW5jnYK3^3w%VIZJykKIbr53'
           post_url, file_link = createPost(auth_username, auth_password, text, title)
 
 
@@ -228,7 +228,7 @@ def download_and_create(client, message):
           lines = text.split('\n')
           title = lines[0]
           def restMediaUL(filePath, auth_username, auth_password):
-              url = 'https://yoururl.com/wp-json/wp/v2/media'
+              url = 'https://kannadamovies.42web.io/wp-json/wp/v2/media'
               data = open(filePath, 'rb').read()
               fileName = os.path.basename(filePath)
               file_extension = os.path.splitext(filePath)[1]
@@ -255,14 +255,14 @@ def download_and_create(client, message):
               file_extension = os.path.splitext(filePath)[1]
               post_data['content'] = f'<img src="{file_link}" alt="{file_name}">' + post_data['content']
 
-              api_url = 'https://yoururl.com/wp-json/wp/v2/posts'
+              api_url = 'https://kannadamovies.42web.io/wp-json/wp/v2/posts'
               response = requests.post(api_url, data=post_data, auth=(auth_username, auth_password))
 
               post_url = response.json().get('link')
               print(f'Post URL: {post_url}')
               return post_url, file_link  # Returning both post_url and file_link
-          auth_username = 'username'
-          auth_password = 'password'
+          auth_username = 'pavan'
+          auth_password = 'kW5jnYK3^3w%VIZJykKIbr53'
           post_url, file_link = createPost(auth_username, auth_password, text, title)
 
 
@@ -293,7 +293,7 @@ def download_and_create(client, message):
           lines = text.split('\n')
           title = lines[0]
           def restMediaUL(filePath, auth_username, auth_password):
-              url = 'https://yoururl.com/wp-json/wp/v2/media'
+              url = 'https://kannadamovies.42web.io/wp-json/wp/v2/media'
               data = open(filePath, 'rb').read()
               fileName = os.path.basename(filePath)
               file_extension = os.path.splitext(filePath)[1]
@@ -320,14 +320,14 @@ def download_and_create(client, message):
               file_extension = os.path.splitext(filePath)[1]
               post_data['content'] = f'<audio controls><source src="{file_link}" type="audio/{file_extension[1:]}"></audio>' + post_data['content']
 
-              api_url = 'https://yoururl.com/wp-json/wp/v2/posts'
+              api_url = 'https://kannadamovies.42web.io/wp-json/wp/v2/posts'
               response = requests.post(api_url, data=post_data, auth=(auth_username, auth_password))
 
               post_url = response.json().get('link')
               print(f'Post URL: {post_url}')
               return post_url, file_link  # Returning both post_url and file_link
-          auth_username = 'username'
-          auth_password = 'password'
+          auth_username = 'pavan'
+          auth_password = 'kW5jnYK3^3w%VIZJykKIbr53'
           post_url, file_link = createPost(auth_username, auth_password, text, title)
 
 
@@ -358,7 +358,7 @@ def download_and_create(client, message):
           lines = text.split('\n')
           title = lines[0]
           def restMediaUL(filePath, auth_username, auth_password):
-              url = 'https://yoururl.com/wp-json/wp/v2/media'
+              url = 'https://kannadamovies.42web.io/wp-json/wp/v2/media'
               data = open(filePath, 'rb').read()
               fileName = os.path.basename(filePath)
               file_extension = os.path.splitext(filePath)[1]
@@ -385,14 +385,14 @@ def download_and_create(client, message):
               file_extension = os.path.splitext(filePath)[1]
               post_data['content'] = f'<audio controls><source src="{file_link}" type="audio/{file_extension[1:]}"></audio>' + post_data['content']
 
-              api_url = 'https://yoururl.com/wp-json/wp/v2/posts'
+              api_url = 'https://kannadamovies.42web.io/wp-json/wp/v2/posts'
               response = requests.post(api_url, data=post_data, auth=(auth_username, auth_password))
 
               post_url = response.json().get('link')
               print(f'Post URL: {post_url}')
               return post_url, file_link  # Returning both post_url and file_link
-          auth_username = 'username'
-          auth_password = 'password'
+          auth_username = 'pavan'
+          auth_password = 'kW5jnYK3^3w%VIZJykKIbr53'
           post_url, file_link = createPost(auth_username, auth_password, text, title)
 
 
@@ -423,7 +423,7 @@ def download_and_create(client, message):
           lines = text.split('\n')
           title = lines[0]
           def restMediaUL(filePath, auth_username, auth_password):
-              url = 'https://yoururl.com/wp-json/wp/v2/media'
+              url = 'https://kannadamovies.42web.io/wp-json/wp/v2/media'
               data = open(filePath, 'rb').read()
               fileName = os.path.basename(filePath)
               file_extension = os.path.splitext(filePath)[1]
@@ -452,14 +452,14 @@ def download_and_create(client, message):
 
               post_data['content'] = f'<video width="640" height="360" controls><source src="{file_link}" type="video/{file_extension[1:]}"></video>' + post_data['content']
 
-              api_url = 'https://yoururl.com/wp-json/wp/v2/posts'
+              api_url = 'https://kannadamovies.42web.io/wp-json/wp/v2/posts'
               response = requests.post(api_url, data=post_data, auth=(auth_username, auth_password))
 
               post_url = response.json().get('link')
               print(f'Post URL: {post_url}')
               return post_url, file_link  # Returning both post_url and file_link
-          auth_username = 'username'
-          auth_password = 'password'
+          auth_username = 'pavan'
+          auth_password = 'kW5jnYK3^3w%VIZJykKIbr53'
           post_url, file_link = createPost(auth_username, auth_password, text, title)
 
 
@@ -491,7 +491,7 @@ def download_and_create(client, message):
           title = lines[0]
           mimetype = message.document.mime_type
           def restMediaUL(filePath, auth_username, auth_password):
-              url = 'https://yoururl.com/wp-json/wp/v2/media'
+              url = 'https://kannadamovies.42web.io/wp-json/wp/v2/media'
               data = open(filePath, 'rb').read()
               fileName = os.path.basename(filePath)
               file_extension = os.path.splitext(filePath)[1]
@@ -520,14 +520,14 @@ def download_and_create(client, message):
 
               post_data['content'] = f'<a href="{file_link}" target="_blank" style="display:inline-block; padding:10px 20px; background-color:#3498db; color:#fff; text-decoration:none; border-radius:5px;">Download {file_name}</a>' + post_data['content']
 
-              api_url = 'https://yoururl.com/wp-json/wp/v2/posts'
+              api_url = 'https://kannadamovies.42web.io/wp-json/wp/v2/posts'
               response = requests.post(api_url, data=post_data, auth=(auth_username, auth_password))
 
               post_url = response.json().get('link')
               print(f'Post URL: {post_url}')
               return post_url, file_link  # Returning both post_url and file_link
-          auth_username = 'username'
-          auth_password = 'password'
+          auth_username = 'pavan'
+          auth_password = 'kW5jnYK3^3w%VIZJykKIbr53'
           post_url, file_link = createPost(auth_username, auth_password, text, title)
 
 
@@ -592,7 +592,7 @@ def download_and_create(client, message):
           text = file_name
           title = file_name
           def restMediaUL(filePath, auth_username, auth_password):
-              url = 'https://yoururl.com/wp-json/wp/v2/media'
+              url = 'https://kannadamovies.42web.io/wp-json/wp/v2/media'
               data = open(filePath, 'rb').read()
               fileName = os.path.basename(filePath)
               file_extension = os.path.splitext(filePath)[1]
@@ -621,14 +621,14 @@ def download_and_create(client, message):
 
               post_data['content'] = f'<video width="640" height="360" controls><source src="{file_link}" type="video/{file_extension[1:]}"></video>' + post_data['content']
 
-              api_url = 'https://yoururl.com/wp-json/wp/v2/posts'
+              api_url = 'https://kannadamovies.42web.io/wp-json/wp/v2/posts'
               response = requests.post(api_url, data=post_data, auth=(auth_username, auth_password))
 
               post_url = response.json().get('link')
               print(f'Post URL: {post_url}')
               return post_url, file_link  # Returning both post_url and file_link
-          auth_username = 'username'
-          auth_password = 'password'
+          auth_username = 'pavan'
+          auth_password = 'kW5jnYK3^3w%VIZJykKIbr53'
           post_url, file_link = createPost(auth_username, auth_password, text, title)
 
 
@@ -658,7 +658,7 @@ def download_and_create(client, message):
           text = file_name
           title = file_name
           def restMediaUL(filePath, auth_username, auth_password):
-              url = 'https://yoururl.com/wp-json/wp/v2/media'
+              url = 'https://kannadamovies.42web.io/wp-json/wp/v2/media'
               data = open(filePath, 'rb').read()
               fileName = os.path.basename(filePath)
               file_extension = os.path.splitext(filePath)[1]
@@ -685,14 +685,14 @@ def download_and_create(client, message):
               file_extension = os.path.splitext(filePath)[1]
               post_data['content'] = f'<img src="{file_link}" alt="{file_name}">' + post_data['content']
 
-              api_url = 'https://yoururl.com/wp-json/wp/v2/posts'
+              api_url = 'https://kannadamovies.42web.io/wp-json/wp/v2/posts'
               response = requests.post(api_url, data=post_data, auth=(auth_username, auth_password))
 
               post_url = response.json().get('link')
               print(f'Post URL: {post_url}')
               return post_url, file_link  # Returning both post_url and file_link
-          auth_username = 'username'
-          auth_password = 'password'
+          auth_username = 'pavan'
+          auth_password = 'kW5jnYK3^3w%VIZJykKIbr53'
           post_url, file_link = createPost(auth_username, auth_password, text, title)
 
 
@@ -722,7 +722,7 @@ def download_and_create(client, message):
           text = file_name
           title = file_name
           def restMediaUL(filePath, auth_username, auth_password):
-              url = 'https://yoururl.com/wp-json/wp/v2/media'
+              url = 'https://kannadamovies.42web.io/wp-json/wp/v2/media'
               data = open(filePath, 'rb').read()
               fileName = os.path.basename(filePath)
               file_extension = os.path.splitext(filePath)[1]
@@ -749,14 +749,14 @@ def download_and_create(client, message):
               file_extension = os.path.splitext(filePath)[1]
               post_data['content'] = f'<audio controls><source src="{file_link}" type="audio/{file_extension[1:]}"></audio>' + post_data['content']
 
-              api_url = 'https://yoururl.com/wp-json/wp/v2/posts'
+              api_url = 'https://kannadamovies.42web.io/wp-json/wp/v2/posts'
               response = requests.post(api_url, data=post_data, auth=(auth_username, auth_password))
 
               post_url = response.json().get('link')
               print(f'Post URL: {post_url}')
               return post_url, file_link  # Returning both post_url and file_link
-          auth_username = 'username'
-          auth_password = 'password'
+          auth_username = 'pavan'
+          auth_password = 'kW5jnYK3^3w%VIZJykKIbr53'
           post_url, file_link = createPost(auth_username, auth_password, text, title)
 
 
@@ -786,7 +786,7 @@ def download_and_create(client, message):
           text = file_name
           title = file_name
           def restMediaUL(filePath, auth_username, auth_password):
-              url = 'https://yoururl.com/wp-json/wp/v2/media'
+              url = 'https://kannadamovies.42web.io/wp-json/wp/v2/media'
               data = open(filePath, 'rb').read()
               fileName = os.path.basename(filePath)
               file_extension = os.path.splitext(filePath)[1]
@@ -813,14 +813,14 @@ def download_and_create(client, message):
               file_extension = os.path.splitext(filePath)[1]
               post_data['content'] = f'<audio controls><source src="{file_link}" type="audio/{file_extension[1:]}"></audio>' + post_data['content']
 
-              api_url = 'https://yoururl.com/wp-json/wp/v2/posts'
+              api_url = 'https://kannadamovies.42web.io/wp-json/wp/v2/posts'
               response = requests.post(api_url, data=post_data, auth=(auth_username, auth_password))
 
               post_url = response.json().get('link')
               print(f'Post URL: {post_url}')
               return post_url, file_link  # Returning both post_url and file_link
-          auth_username = 'username'
-          auth_password = 'password'
+          auth_username = 'pavan'
+          auth_password = 'kW5jnYK3^3w%VIZJykKIbr53'
           post_url, file_link = createPost(auth_username, auth_password, text, title)
 
 
@@ -850,7 +850,7 @@ def download_and_create(client, message):
           text = file_name
           title = file_name
           def restMediaUL(filePath, auth_username, auth_password):
-              url = 'https://yoururl.com/wp-json/wp/v2/media'
+              url = 'https://kannadamovies.42web.io/wp-json/wp/v2/media'
               data = open(filePath, 'rb').read()
               fileName = os.path.basename(filePath)
               file_extension = os.path.splitext(filePath)[1]
@@ -879,14 +879,14 @@ def download_and_create(client, message):
 
               post_data['content'] = f'<video width="640" height="360" controls><source src="{file_link}" type="video/{file_extension[1:]}"></video>' + post_data['content']
 
-              api_url = 'https://yoururl.com/wp-json/wp/v2/posts'
+              api_url = 'https://kannadamovies.42web.io/wp-json/wp/v2/posts'
               response = requests.post(api_url, data=post_data, auth=(auth_username, auth_password))
 
               post_url = response.json().get('link')
               print(f'Post URL: {post_url}')
               return post_url, file_link  # Returning both post_url and file_link
-          auth_username = 'username'
-          auth_password = 'password'
+          auth_username = 'pavan'
+          auth_password = 'kW5jnYK3^3w%VIZJykKIbr53'
           post_url, file_link = createPost(auth_username, auth_password, text, title)
 
 
@@ -915,7 +915,7 @@ def download_and_create(client, message):
           file_size_mib = file_size_bytes / (1024 ** 2)
           mimetype = message.document.mime_type
           def restMediaUL(filePath, auth_username, auth_password):
-              url = 'https://yoururl.com/wp-json/wp/v2/media'
+              url = 'https://kannadamovies.42web.io/wp-json/wp/v2/media'
               data = open(filePath, 'rb').read()
               fileName = os.path.basename(filePath)
               file_extension = os.path.splitext(filePath)[1]
@@ -944,14 +944,14 @@ def download_and_create(client, message):
 
               post_data['content'] = f'<a href="{file_link}" target="_blank" style="display:inline-block; padding:10px 20px; background-color:#3498db; color:#fff; text-decoration:none; border-radius:5px;">Download {file_name}</a>' + post_data['content']
 
-              api_url = 'https://yoururl.com/wp-json/wp/v2/posts'
+              api_url = 'https://kannadamovies.42web.io/wp-json/wp/v2/posts'
               response = requests.post(api_url, data=post_data, auth=(auth_username, auth_password))
 
               post_url = response.json().get('link')
               print(f'Post URL: {post_url}')
               return post_url, file_link  # Returning both post_url and file_link
-          auth_username = 'username'
-          auth_password = 'password'
+          auth_username = 'pavan'
+          auth_password = 'kW5jnYK3^3w%VIZJykKIbr53'
           post_url, file_link = createPost(auth_username, auth_password, text, title)
 
 
